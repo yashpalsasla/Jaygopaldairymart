@@ -70,7 +70,7 @@ nav ul li a:hover {
 }
 .home-logo:hover{ 
    filter: drop-shadow(4px 6px 12px black);
-   transform: scale(1.5);
+   transform: scale(1.1);
 }
 
 .hero {
