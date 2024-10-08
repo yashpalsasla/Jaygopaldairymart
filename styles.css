@@ -253,6 +253,7 @@ h2 {
     
     max-width: 500px;
     width: 85%;
+    align-items: center;
     text-align: center;
     animation: colorChange 10s infinite alternate;
 }
