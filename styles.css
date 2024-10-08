@@ -68,9 +68,7 @@ nav ul li a:hover {
 .home-logo{
   filter: drop-shadow(2px 4px 6px #8697c4);
 }
-.home-logo:hover{ 
-   filter: drop-shadow(4px 6px 12px black);
-   transform: scale(1.1);
+
 }
 
 .hero {
@@ -254,7 +252,7 @@ h2 {
     max-width: 500px;
     width: 85%;
     align-items: center;
-    text-align: center;
+    
     animation: colorChange 10s infinite alternate;
 }
 
