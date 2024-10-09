@@ -46,3 +46,62 @@ function sendWhatsAppMessage(name, email, phone, message) {
     const whatsappURL = `https://wa.me/+919898490277?text=Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
     window.open(whatsappURL, '_blank'); // Open WhatsApp with pre-filled message
 }
+
+
+let cart = [];
+let totalPrice = 0;
+
+function addToCart(productName, selectId) {
+    const selectElement = document.getElementById(selectId);
+    const selectedOption = selectElement.options[selectElement.selectedIndex].value;
+    const price = parseInt(selectElement.getAttribute("data-price"));
+
+    // Add item to cart
+    cart.push({ name: productName, quantity: selectedOption, price: price });
+    totalPrice += price;
+
+    updateCart();
+    alert(`Added ${selectedOption} of ${productName} to cart.`);
+}
+
+function updateCart() {
+    const cartItemsElement = document.getElementById("cart-items");
+    cartItemsElement.innerHTML = "";
+
+    cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} (${item.quantity}) - ₹${item.price}`;
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.className = "remove-button";
+        removeButton.onclick = () => removeFromCart(index);
+        li.appendChild(removeButton);
+        cartItemsElement.appendChild(li);
+    });
+
+    document.getElementById("total-price").textContent = `Total: ₹${totalPrice}`;
+}
+
+function removeFromCart(index) {
+    totalPrice -= cart[index].price;
+    cart.splice(index, 1);
+    updateCart();
+}
+
+function sendOrder() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+    const orderDetails = cart.map(item => `${item.name}  (${item.quantity})  - ₹${item.price}`).join('');
+    const message = `Order Details:${orderDetails} 
+    Total: ₹${totalPrice}`;
+    const phoneNumber = "+919898490277"; // Replace with your WhatsApp number
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+
+    alert("Thank you for your order!");
+    cart = [];
+    totalPrice = 0;
+    updateCart();
+                                                                                  }
