@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +33,7 @@
     <section id="home">
         <div class="hero">
            <div class="home-logo">
-           <img  src="logo1.jpg" alt="logo" style="height:13%; width: 30%; align-items: center;border-radius: 60%;">
+            <a href="https://wa.me/+919898490277"><img  src="logo1.jpg" alt="logo" style="height:30%; width: 40%; align-items: center;border-radius: 60%;"></a> 
              
            </div>
             <h2>Welcome to Jay Gopal Dairy Mart</h2>
@@ -49,47 +50,141 @@
         <img src="images/about-us.jpg" alt="About Us" class="about-image">
     </section>
 
-    <section id="products">
+ <section id="products">
         <h2>Our Products</h2>
-        <p>We offer a variety of products made from the finest ingredients to ensure quality and taste. Each product is crafted with care, using traditional methods to maintain authenticity.</p>
         <div class="product-container">
             <div class="product">
-                <h3>Sweets</h3>
-                <img src="sweets.jpg" alt="Sweets">
-                <p>Delicious Indian sweets made from the finest ingredients, including Gulab Jamun, Ladoo, and Barfi. Perfect for celebrations or as a sweet treat any time!</p>
+                <h3>Jalebi</h3>
+                <img src="jalebi.jpg" alt="Jalebi">
+                <p>Sweet and crispy fried spirals soaked in syrup.</p>
+                <label for="weight-jalebi">Select quantity:</label>
+                <select id="weight-jalebi" data-price="100">
+                    <option value="250g - ₹100">250g - ₹100</option>
+                    <option value="500g - ₹200">500g - ₹200</option>
+                </select>
+                <button type="button" onclick="addToCart('Jalebi', 'weight-jalebi')">Add to Cart</button>
             </div>
+
             <div class="product">
-                <h3>Snacks</h3>
-                <img src="snacks.jpg" alt="Snacks">
-                <p>Crunchy and savory snacks perfect for any occasion. Our Farsan range includes Samosas, Kachoris, and Bhujia, ideal for tea time or gatherings.</p>
+                <h3>Motichur Na Ladoo</h3>
+                <img src="motichurnaladoo.jpg" alt="Motichur Na Ladoo">
+                <p>Delightful sweets made from fine boondi and syrup.</p>
+                <label for="weight-motichurnaladoo">Select quantity:</label>
+                <select id="weight-motichurnaladoo" data-price="150">
+                    <option value="250g - ₹150">250g - ₹150</option>
+                    <option value="500g - ₹300">500g - ₹300</option>
+                </select>
+                <button type="button" onclick="addToCart('Motichur Na Ladoo', 'weight-motichurnaladoo')">Add to Cart</button>
             </div>
+
+            <div class="product">
+                <h3>Ladoo</h3>
+                <img src="ladoos.jpg" alt="Ladoo">
+                <p>Traditional sweet made from gram flour and ghee.</p>
+                <label for="weight-ladoo">Select quantity:</label>
+                <select id="weight-ladoo" data-price="120">
+                    <option value="250g - ₹120">250g - ₹120</option>
+                    <option value="500g - ₹240">500g - ₹240</option>
+                </select>
+                <button type="button" onclick="addToCart('Ladoo', 'weight-ladoo')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <h3>Peda</h3>
+                <img src="peda.jpg" alt="Peda">
+                <p>Soft and creamy Indian sweet, perfect for any occasion.</p>
+                <label for="weight-peda">Select quantity:</label>
+                <select id="weight-peda" data-price="120">
+                    <option value="250g - ₹120">250g - ₹120</option>
+                    <option value="500g - ₹240">500g - ₹240</option>
+                </select>
+                <button type="button" onclick="addToCart('Peda', 'weight-peda')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <h3>Kesar Math</h3>
+                <img src="kesarmath.jpg" alt="Kesar Math">
+                <p>Saffron flavored sweet, rich in taste and aroma.</p>
+                <label for="weight-kesarmath">Select quantity:</label>
+                <select id="weight-kesarmath" data-price="150">
+                    <option value="250g - ₹150">250g - ₹150</option>
+                    <option value="500g - ₹300">500g - ₹300</option>
+                </select>
+                <button type="button" onclick="addToCart('Kesar Math', 'weight-kesarmath')">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <h3>Rajbhog Matho</h3>
+                <img src="rajbhog.jpg" alt="Rajbhog Math">
+                <p>Delicious sweets stuffed with khoya and dry fruits.</p>
+                <label for="weight-rajbhogmath">Select quantity:</label>
+                <select id="weight-rajbhogmath" data-price="150">
+                    <option value="250g - ₹150">250g - ₹150</option>
+                    <option value="500g - ₹300">500g - ₹300</option>
+                </select>
+                <button type="button" onclick="addToCart('Rajbhog Math', 'weight-rajbhogmath')">Add to Cart</button>
+            </div>
+
             <div class="product">
                 <h3>Milk</h3>
                 <img src="milk.jpg" alt="Milk">
-                <p>Fresh, pure milk sourced from local dairies. We ensure our milk is free from additives and is perfect for cooking, baking, or enjoying a glass chilled.</p>
+                <p>Fresh and pure milk, ideal for cooking and beverages.</p>
+                <label for="weight-milk">Select quantity:</label>
+                <select id="weight-milk" data-price="60">
+                    <option value="500ml - ₹60">500ml - ₹60</option>
+                    <option value="1L - ₹110">1L - ₹110</option>
+                </select>
+                <button type="button" onclick="addToCart('Milk', 'weight-milk')">Add to Cart</button>
             </div>
+
             <div class="product">
-                <h3>Ice Cream</h3>
-                <img src="icecream.jpg" alt="Ice Cream">
-                <p>Rich and creamy ice creams available in various flavors, including Mango, Pistachio, and Vanilla. Made with natural ingredients for a delightful taste.</p>
+                <h3>Dahi</h3>
+                <img src="dahi.jpg" alt="Dahi">
+                <p>Fresh and creamy yogurt, perfect for meals and snacks.</p>
+                <label for="weight-dahi">Select quantity:</label>
+                <select id="weight-dahi" data-price="50">
+                    <option value="250g - ₹50">250g - ₹50</option>
+                    <option value="500g - ₹100">500g - ₹100</option>
+                </select>
+                <button type="button" onclick="addToCart('Dahi', 'weight-dahi')">Add to Cart</button>
             </div>
+
             <div class="product">
-                <h3>Cold Drinks</h3>
-                <img src="colddrink.jpg" alt="Cold Drinks">
-                <p>Refreshing cold drinks to quench your thirst. From traditional Lemonade to modern Soft Drinks, we have something for everyone!</p>
+                <h3>Dhee</h3>
+                <img src="dhee.jpg" alt="Dhee">
+                <p>Traditional clarified butter, rich in flavor.</p>
+                <label for="weight-dhee">Select quantity:</label>
+                <select id="weight-dhee" data-price="200">
+                    <option value="250g - ₹200">250g - ₹200</option>
+                    <option value="500g - ₹380">500g - ₹380</option>
+                </select>
+                <button type="button" onclick="addToCart('Dhee', 'weight-dhee')">Add to Cart</button>
             </div>
+
             <div class="product">
-                <h3>Curd</h3>
-                <img src="dahi.jpg" alt="Curd">
-                <p>Freshly made curd, perfect for your meals. Our curd is smooth, creamy, and packed with flavor, ideal for side dishes or desserts.</p>
+                <h3>Buttermilk</h3>
+                <img src="buttermilk.jpg" alt="Buttermilk">
+                <p>Refreshing buttermilk, perfect for cooling down.</p>
+                <label for="weight-buttermilk">Select quantity:</label>
+                <select id="weight-buttermilk" data-price="30">
+                    <option value="500ml - ₹30">500ml - ₹30</option>
+                    <option value="1L - ₹50">1L - ₹50</option>
+                </select>
+                <button type="button" onclick="addToCart('Buttermilk', 'weight-buttermilk')">Add to Cart</button>
             </div>
-            <div class="product">
-                <h3>Chaas</h3>
-                <img src="chaas.jpg" alt="Chaas">
-                <p>Traditional buttermilk to keep you cool in the summer. Made with spices and herbs for a refreshing taste.</p>
-            </div>
+
         </div>
     </section>
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: ₹0</p>
+        <button id="send-order" onclick="sendOrder()">Send Order via WhatsApp</button>
+    </div>
+                
+    
+    
 
     <section id="services">
         <h2>Our Services</h2>
@@ -122,7 +217,7 @@
   <img class="menu-image" src="jaygopal.jpg" alt="menucard">
   <img class="menu-image" src="jaygopal.png" alt="jaygopal.jpg">
    <div class="download_buttons">
-              <a download="jaygopalmenu.pdf" href="jaygopalmenu.pdf" class="button button--flex"><strong> 
+              <a download="jaygopalmenu.pdf" href="jaygopalmanu.pdf" class="button button--flex"><strong> 
                 Download Our Card </strong> </a>
   </div>
   
